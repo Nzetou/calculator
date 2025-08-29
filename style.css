@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  font-family: ' Helvetica', sans-serif;
+}
+
+.calculator {
+  width: 320px;
+  height: 600px;
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+#display {
+  color: #000;
+  font-size: 80px;
+  height: 60px;
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+button {
+  background-color: #333;
+  /* Dark gray for number buttons */
+  color: #fff;
+  font-size: 30px;
+  border-radius: 50%;
+  /* Circular buttons */
+  width: 50px;
+  /* Fixed width and height for circular shape */
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:active {
+  background-color: #555;
+  /* Darker on press */
+}
+
+.button.orange {
+  background-color: #ff9500;
+  /* Orange for operation buttons */
+}
+
+button.orange:active {
+  background-color: #e08000;
+}
+
+.button.light-gray {
+  background-color: #a6a6a6;
+  /* Light gray for AC, +/-, % */
+  color: #000;
+}
+
+.button.light-gray:active {
+  background-color: #8c8c8c;
+}
+
+.button.zero {
+  grid-column: span 2;
+  /* Zero button spans two columns */
+  border-radius: 35px;
+  /* Half-circle for zero button */
+  width: auto;
+  /* Adjust width automatically */
+  justify-content: flex-start;
+  /* Align text to left */
+  padding-left: 25px;
+}
